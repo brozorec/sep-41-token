@@ -13,7 +13,7 @@ use soroban_sdk::{
 };
 
 fn create_token<'a>(e: &Env, admin: &Address) -> MockTokenClient<'a> {
-    let token = MockTokenClient::new(e, &e.register_contract(None, MockToken {}));
+    let token = MockTokenClient::new(e, &e.register(MockToken {}, ()));
     token.initialize(admin, &7, &"name".into_val(e), &"symbol".into_val(e));
     token
 }
@@ -250,7 +250,7 @@ fn initialize_already_initialized() {
 fn decimal_is_over_max() {
     let e = Env::default();
     let admin = Address::generate(&e);
-    let token = MockTokenClient::new(&e, &e.register_contract(None, MockToken {}));
+    let token = MockTokenClient::new(&e, &e.register(MockToken {}, ()));
     token.initialize(
         &admin,
         &(27_u32 + 1),

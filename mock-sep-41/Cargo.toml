@@ -1,11 +1,11 @@
 [package]
 name = "mock-sep-41-token"
-version = "0.4.0"
+version = "0.5.0"
 authors = ["Script3 <support@script3.io>"]
 license = "MIT"
 edition = "2021"
 publish = false
-rust-version = "1.79.0"
+rust-version = "1.79"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
@@ -18,5 +18,5 @@ testutils = ["soroban-sdk/testutils"]
 soroban-sdk = { workspace = true }
 sep-41-token = { path = "../sep-41" }
 
-[dev_dependencies]
+[dev-dependencies]
 soroban-sdk = { workspace = true, features = ["testutils"] }
