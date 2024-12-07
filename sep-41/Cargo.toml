@@ -1,6 +1,6 @@
 [package]
 name = "sep-41-token"
-version = "1.1.0"
+version = "1.2.0"
 description = "SEP-0041 Standard Token trait, client, and mock implementation"
 authors = ["Script3 <support@script3.io>"]
 repository = "https://github.com/script3/sep-40-oracle"
@@ -8,7 +8,7 @@ license = "MIT"
 edition = "2021"
 readme = "README.md"
 keywords = ["no_std", "wasm", "soroban"]
-rust-version = "1.79.0"
+rust-version = "1.79"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
@@ -20,5 +20,5 @@ testutils = ["soroban-sdk/testutils"]
 [dependencies]
 soroban-sdk = { workspace = true }
 
-[dev_dependencies]
+[dev-dependencies]
 soroban-sdk = { workspace = true, features = ["testutils"] }
